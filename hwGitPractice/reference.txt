@@ -1,0 +1,12 @@
+git init
+git clone <address>
+git add <file>
+git commit [file] [options (ex. -m "message")]
+git push
+git checkout
+git diff
+git show [ex. HEAD]
+git reset [ex. HEAD] <first 7 SHA digits>
+git log
+git config
+git pull
