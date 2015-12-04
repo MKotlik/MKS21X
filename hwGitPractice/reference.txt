@@ -1,14 +1,12 @@
 git init //Create new local respository
 git clone <address> //Copy repository to local directory
 git add <file> //add file(s) to staging area
-OOH BLAH BLAH
 git commit [file] [options (ex. -m "message")] //Commit changes to staging area
-git push [origin] [master] //Send changes to the master branch (server) of your repository SUCH BOGUS
-LOOKgit checkout //replace changes in pwd with last content in commited file (head)
-git diff //view file differencesAT
-THISgit show [ex. HEAD] //show committed change
-git reset [ex. HEAD] <first 7 SHA digits> //reset local content to a version from the serverBOGUS!
-git log //show the commit logBLEHHHHH
+git push [origin] [master] //Send changes to the master branch (server) of your repository
+git checkout //replace changes in pwd with last content in commited file (head)
+git diff //view file differences
+git show [ex. HEAD] //show committed change
+git reset [ex. HEAD] <first 7 SHA digits> //reset local content to a version from the server
+git log //show the commit log
 git config //Change git settings (ex. set username and email)
 git pull //merge changes on the remote server to your local directory
-I HAVE ADDED LOTSS OF BUGOSS MUHAHAHAHA
