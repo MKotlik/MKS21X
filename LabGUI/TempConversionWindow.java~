@@ -1,0 +1,22 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class TempConversionWindow extends JFrame{
+    private Container pane;
+
+    public TempConversionWindow() {
+	this.setTitle("My first GUI");
+	this.setSize(600,400);
+	this.setLocation(100,100);
+        this.setDefaultCloseOperation(
+				      EXIT_ON_CLOSE);
+
+	pane = this.getContentPane();
+	pane.setLayout(new FlowLayout());
+
+	JButton b1 = new JButton("Woah!");
+	pane.add(b1);
+    }
+
+}
