@@ -11,7 +11,7 @@ public class TempConversionWindow extends JFrame implements ActionListener{
 
     public TempConversionWindow() {
 	this.setTitle("My first GUI");
-	this.setSize(600,400);
+	this.setSize(150,150);
 	this.setLocation(100,100);
         this.setDefaultCloseOperation(
 				      EXIT_ON_CLOSE);
@@ -38,6 +38,8 @@ public class TempConversionWindow extends JFrame implements ActionListener{
 	if (DEBUG){System.out.println("Debugging enabled");}
     }
 
+    //This code is highly repetitive. It could be shorter if I check for all non-working cases first before responding to event type.
+    //^I may rewrite it later.
     public void actionPerformed(ActionEvent e){
 	String event = e.getActionCommand();
 	if(event.equals("CtoF")){
@@ -55,6 +57,7 @@ public class TempConversionWindow extends JFrame implements ActionListener{
 		}
 	    } else {
 		if (DEBUG){System.out.println("No input entered");}
+		    tempOutput.setText("Enter temperature");
 	    }
 	}
 	if(event.equals("FtoC")){
@@ -72,6 +75,7 @@ public class TempConversionWindow extends JFrame implements ActionListener{
 		}
 	    } else {
 		if (DEBUG){System.out.println("No input entered");}
+		tempOutput.setText("Enter temperature");
 	    }
 	}
     }
