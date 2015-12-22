@@ -43,6 +43,18 @@ public String toString(){
 	return checkedZip + "\t" + symbolicCode;
 }
 
+public String getZip(){
+	return _zip;
+}
+
+public String getCheckedZip(){
+	return _zip + _checkDigit;
+}
+
+public void setZip(String newZip){
+	_zip = newZip;
+	_checkDigit = checkSum();
+}
 
 public boolean equals(Object other){
 	return this == other || (other instanceof BarCode && toString().equals(other.toString()));
