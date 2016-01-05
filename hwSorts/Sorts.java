@@ -18,126 +18,129 @@ public class Sorts{
     }
 
     public static void selectionSort(int[] data){
-	for (int swapInd = 0; swapInd < data.length; swapInd++){
-	    int minInd = swapInd;
-	    int min = data[minInd];
-	    for (int i = swapInd; i < data.length; i++){
-		if (data[i] < min){
-		    minInd = i;
-		    min = data[minInd];
+		for (int swapInd = 0; swapInd < data.length; swapInd++){
+	    	int minInd = swapInd;
+	    	int min = data[minInd];
+	    	for (int i = swapInd; i < data.length; i++){
+				if (data[i] < min){
+		    		minInd = i;
+		    		min = data[minInd];
+				}
+	    	}
+	    	data[minInd] = data[swapInd];
+	    	data[swapInd] = min;
 		}
-	    }
-	    data[minInd] = data[swapInd];
-	    data[swapInd] = min;
-	}
     }
 
     public static void bubbleSort(int[] data){
-	for (int upperBound = data.length - 1; upperBound > 0; upperBound--){
-	    int swap = 0;
-	    for (int i = 0; i < upperBound; i++){
-		if (data[i] > data[i+1]){
-		    swap = data[i + 1];
-		    data[i+1] = data[i];
-		    data[i] = swap;
+		for (int upperBound = data.length - 1; upperBound > 0; upperBound--){
+		    int swap = 0;
+		    for (int i = 0; i < upperBound; i++){
+				if (data[i] > data[i+1]){
+			    	swap = data[i + 1];
+			    	data[i+1] = data[i];
+			    	data[i] = swap;
+				}
+		    }
 		}
-	    }
-	}
     }
 
     public static void main(String[]args){
+    	if (args.length = 0){
+	    	//SelectionSort Sort tests
+			int[] test1 = {};
+			System.out.println(Arrays.toString(test1));
+			selectionSort(test1);
+			System.out.println(Arrays.toString(test1));
 
-    	//SelectionSort Sort tests
-		int[] test1 = {};
-		System.out.println(Arrays.toString(test1));
-		selectionSort(test1);
-		System.out.println(Arrays.toString(test1));
+			int[] test2 = {1};
+			System.out.println(Arrays.toString(test2));
+			selectionSort(test2);
+			System.out.println(Arrays.toString(test2));
 
-		int[] test2 = {1};
-		System.out.println(Arrays.toString(test2));
-		selectionSort(test2);
-		System.out.println(Arrays.toString(test2));
+			int[] test3 = {1,0};
+			System.out.println(Arrays.toString(test3));
+			selectionSort(test3);
+			System.out.println(Arrays.toString(test3));
 
-		int[] test3 = {1,0};
-		System.out.println(Arrays.toString(test3));
-		selectionSort(test3);
-		System.out.println(Arrays.toString(test3));
+			int[] test4 = {0,1,2,3,4,5};
+			System.out.println(Arrays.toString(test4));
+			selectionSort(test4);
+			System.out.println(Arrays.toString(test4));
 
-		int[] test4 = {0,1,2,3,4,5};
-		System.out.println(Arrays.toString(test4));
-		selectionSort(test4);
-		System.out.println(Arrays.toString(test4));
+			int[] test5 = {3,0,4,1,2,5};
+			System.out.println(Arrays.toString(test5));
+			selectionSort(test5);
+			System.out.println(Arrays.toString(test5));
 
-		int[] test5 = {3,0,4,1,2,5};
-		System.out.println(Arrays.toString(test5));
-		selectionSort(test5);
-		System.out.println(Arrays.toString(test5));
+			int[] test6 = {-1,0,-5,6,3,-11,12,2};
+			System.out.println(Arrays.toString(test6));
+			selectionSort(test6);
+			System.out.println(Arrays.toString(test6));
 
-		int[] test6 = {-1,0,-5,6,3,-11,12,2};
-		System.out.println(Arrays.toString(test6));
-		selectionSort(test6);
-		System.out.println(Arrays.toString(test6));
+			//InsertionSort Sort tests
+			int[] test1i = {};
+			System.out.println(Arrays.toString(test1i));
+			insertionSort(test1i);
+			System.out.println(Arrays.toString(test1i));
 
-		//InsertionSort Sort tests
-		int[] test1i = {};
-		System.out.println(Arrays.toString(test1i));
-		insertionSort(test1i);
-		System.out.println(Arrays.toString(test1i));
+			int[] test2i = {1};
+			System.out.println(Arrays.toString(test2i));
+			insertionSort(test2i);
+			System.out.println(Arrays.toString(test2i));
 
-		int[] test2i = {1};
-		System.out.println(Arrays.toString(test2i));
-		insertionSort(test2i);
-		System.out.println(Arrays.toString(test2i));
+			int[] test3i = {1,0};
+			System.out.println(Arrays.toString(test3i));
+			insertionSort(test3i);
+			System.out.println(Arrays.toString(test3i));
 
-		int[] test3i = {1,0};
-		System.out.println(Arrays.toString(test3i));
-		insertionSort(test3i);
-		System.out.println(Arrays.toString(test3i));
+			int[] test4i = {0,1,2,3,4,5};
+			System.out.println(Arrays.toString(test4i));
+			insertionSort(test4i);
+			System.out.println(Arrays.toString(test4i));
 
-		int[] test4i = {0,1,2,3,4,5};
-		System.out.println(Arrays.toString(test4i));
-		insertionSort(test4i);
-		System.out.println(Arrays.toString(test4i));
+			int[] test5i = {3,0,4,1,2,5};
+			System.out.println(Arrays.toString(test5i));
+			insertionSort(test5i);
+			System.out.println(Arrays.toString(test5i));
 
-		int[] test5i = {3,0,4,1,2,5};
-		System.out.println(Arrays.toString(test5i));
-		insertionSort(test5i);
-		System.out.println(Arrays.toString(test5i));
+			int[] test6i = {-1,0,-5,6,3,-11,12,2};
+			System.out.println(Arrays.toString(test6i));
+			insertionSort(test6i);
+			System.out.println(Arrays.toString(test6i));
 
-		int[] test6i = {-1,0,-5,6,3,-11,12,2};
-		System.out.println(Arrays.toString(test6i));
-		insertionSort(test6i);
-		System.out.println(Arrays.toString(test6i));
+			//Bubble Sort Testing
+			int[] test1b = {};
+			System.out.println(Arrays.toString(test1b));
+			bubbleSort(test1b);
+			System.out.println(Arrays.toString(test1b));
 
-		//Bubble Sort Testing
-		int[] test1b = {};
-		System.out.println(Arrays.toString(test1b));
-		bubbleSort(test1b);
-		System.out.println(Arrays.toString(test1b));
+			int[] test2b = {1};
+			System.out.println(Arrays.toString(test2b));
+			bubbleSort(test2b);
+			System.out.println(Arrays.toString(test2b));
 
-		int[] test2b = {1};
-		System.out.println(Arrays.toString(test2b));
-		bubbleSort(test2b);
-		System.out.println(Arrays.toString(test2b));
+			int[] test3b = {1,0};
+			System.out.println(Arrays.toString(test3b));
+			bubbleSort(test3b);
+			System.out.println(Arrays.toString(test3b));
 
-		int[] test3b = {1,0};
-		System.out.println(Arrays.toString(test3b));
-		bubbleSort(test3b);
-		System.out.println(Arrays.toString(test3b));
+			int[] test4b = {0,1,2,3,4,5};
+			System.out.println(Arrays.toString(test4b));
+			bubbleSort(test4b);
+			System.out.println(Arrays.toString(test4b));
 
-		int[] test4b = {0,1,2,3,4,5};
-		System.out.println(Arrays.toString(test4b));
-		bubbleSort(test4b);
-		System.out.println(Arrays.toString(test4b));
+			int[] test5b = {3,0,4,1,2,5};
+			System.out.println(Arrays.toString(test5b));
+			bubbleSort(test5b);
+			System.out.println(Arrays.toString(test5b));
 
-		int[] test5b = {3,0,4,1,2,5};
-		System.out.println(Arrays.toString(test5b));
-		bubbleSort(test5b);
-		System.out.println(Arrays.toString(test5b));
-
-		int[] test6b = {-1,0,-5,6,3,-11,12,2};
-		System.out.println(Arrays.toString(test6b));
-		bubbleSort(test6b);
-		System.out.println(Arrays.toString(test6b));
-    }
+			int[] test6b = {-1,0,-5,6,3,-11,12,2};
+			System.out.println(Arrays.toString(test6b));
+			bubbleSort(test6b);
+			System.out.println(Arrays.toString(test6b));
+		} else if (args[0].equals("insertion")) {
+			
+		}
+	}
 }
