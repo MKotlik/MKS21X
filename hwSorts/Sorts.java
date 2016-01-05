@@ -108,5 +108,36 @@ public class Sorts{
 		System.out.println(Arrays.toString(test6i));
 		insertionSort(test6i);
 		System.out.println(Arrays.toString(test6i));
+
+		//Bubble Sort Testing
+		int[] test1b = {};
+		System.out.println(Arrays.toString(test1b));
+		bubbleSort(test1b);
+		System.out.println(Arrays.toString(test1b));
+
+		int[] test2b = {1};
+		System.out.println(Arrays.toString(test2b));
+		bubbleSort(test2b);
+		System.out.println(Arrays.toString(test2b));
+
+		int[] test3b = {1,0};
+		System.out.println(Arrays.toString(test3b));
+		bubbleSort(test3b);
+		System.out.println(Arrays.toString(test3b));
+
+		int[] test4b = {0,1,2,3,4,5};
+		System.out.println(Arrays.toString(test4b));
+		bubbleSort(test4b);
+		System.out.println(Arrays.toString(test4b));
+
+		int[] test5b = {3,0,4,1,2,5};
+		System.out.println(Arrays.toString(test5b));
+		bubbleSort(test5b);
+		System.out.println(Arrays.toString(test5b));
+
+		int[] test6b = {-1,0,-5,6,3,-11,12,2};
+		System.out.println(Arrays.toString(test6b));
+		bubbleSort(test6b);
+		System.out.println(Arrays.toString(test6b));
     }
 }
