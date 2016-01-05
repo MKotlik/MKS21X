@@ -140,7 +140,7 @@ public class Sorts{
 			bubbleSort(test6b);
 			System.out.println(Arrays.toString(test6b));
 		} else if (args[0].equals("insertion")) {
-			
+
 		}
 	}
 }
