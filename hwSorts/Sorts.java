@@ -33,7 +33,16 @@ public class Sorts{
     }
 
     public static void bubbleSort(int[] data){
-	for (int upperBound = data.length - 1; upperBound
+	for (int upperBound = data.length - 1; upperBound > 0; upperBound--){
+	    int swap = 0;
+	    for (int i = 0; i < upperBound; i++){
+		if (data[i] > data[i+1]){
+		    swap = data[i + 1];
+		    data[i+1] = data[i];
+		    data[i] = swap;
+		}
+	    }
+	}
     }
 
     public static void main(String[]args){
