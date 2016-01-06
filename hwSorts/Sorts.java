@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 
 public class Sorts{
 	 public static void insertionSort(int[] data){
@@ -46,8 +47,9 @@ public class Sorts{
     }
 
     public static void main(String[]args){
-    	if (args.length = 0){
+    	if (args.length == 0){
 	    	//SelectionSort Sort tests
+	    	System.out.println("Testing Selection Sort");
 			int[] test1 = {};
 			System.out.println(Arrays.toString(test1));
 			selectionSort(test1);
@@ -79,6 +81,7 @@ public class Sorts{
 			System.out.println(Arrays.toString(test6));
 
 			//InsertionSort Sort tests
+			System.out.println("Testing Insertion Sort");
 			int[] test1i = {};
 			System.out.println(Arrays.toString(test1i));
 			insertionSort(test1i);
@@ -110,6 +113,7 @@ public class Sorts{
 			System.out.println(Arrays.toString(test6i));
 
 			//Bubble Sort Testing
+			System.out.println("Testing Bubble Sort");
 			int[] test1b = {};
 			System.out.println(Arrays.toString(test1b));
 			bubbleSort(test1b);
@@ -140,7 +144,57 @@ public class Sorts{
 			bubbleSort(test6b);
 			System.out.println(Arrays.toString(test6b));
 		} else if (args[0].equals("insertion")) {
-
+			int[] largeTest = new int[100000];
+			int[] comparisonArray = new int[largeTest.length];
+			Random randGen = new Random();
+			for (int i = 0; i < largeTest.length; i++){
+				largeTest[i] = randGen.nextInt(100000) - 50000;
+			}
+			if (args.length == 2 && args[1].equals("verify")){
+				System.arraycopy(largeTest, 0, comparisonArray, 0, largeTest.length);
+			}
+			insertionSort(largeTest);
+			if (args.length == 2 && args[1].equals("verify")){
+				Arrays.sort(comparisonArray);
+				System.out.println("Sorted correctly: " + Arrays.equals(largeTest, comparisonArray));
+			}
+		} else if (args[0].equals("selection")) {
+			int[] largeTest = new int[100000];
+			int[] comparisonArray = new int[largeTest.length];
+			Random randGen = new Random();
+			for (int i = 0; i < largeTest.length; i++){
+				largeTest[i] = randGen.nextInt(100000) - 50000;
+			}
+			if (args.length == 2 && args[1].equals("verify")){
+				System.arraycopy(largeTest, 0, comparisonArray, 0, largeTest.length);
+			}
+			selectionSort(largeTest);
+			if (args.length == 2 && args[1].equals("verify")){
+				Arrays.sort(comparisonArray);
+				System.out.println("Sorted correctly: " + Arrays.equals(largeTest, comparisonArray));
+			}
+		} else if (args[0].equals("bubble")) {
+			int[] largeTest = new int[100000];
+			int[] comparisonArray = new int[largeTest.length];
+			Random randGen = new Random();
+			for (int i = 0; i < largeTest.length; i++){
+				largeTest[i] = randGen.nextInt(100000) - 50000;
+			}
+			if (args.length == 2 && args[1].equals("verify")){
+				System.arraycopy(largeTest, 0, comparisonArray, 0, largeTest.length);
+			}
+			bubbleSort(largeTest);
+			if (args.length == 2 && args[1].equals("verify")){
+				Arrays.sort(comparisonArray);
+				System.out.println("Sorted correctly: " + Arrays.equals(largeTest, comparisonArray));
+			}
+		} else if (args[0].equals("default")) {
+			int[] largeTest = new int[100000];
+			Random randGen = new Random();
+			for (int i = 0; i < largeTest.length; i++){
+				largeTest[i] = randGen.nextInt(100000) - 50000;
+			}
+			Arrays.sort(largeTest);
 		}
 	}
 }
